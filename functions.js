@@ -6,8 +6,13 @@
  */
 function greet(name) {
   // Your code here
-  console.log('Hello');
-  console.log(`Hello ${name}`);
+  if (name){
+    console.log(`Hello ${name}`);
+  }else{
+    console.log('Hello');
+  }
+  
+  
 }
 
 /**
