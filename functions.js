@@ -6,6 +6,8 @@
  */
 function greet(name) {
   // Your code here
+  console.log('Hello');
+  console.log(`Hello ${name}`);
 }
 
 /**
@@ -15,6 +17,11 @@ function greet(name) {
  */
 function isOdd(n) {
   // Your code here
+  if (n % 2 !== 0) {
+    return true;
+  } else{
+    return false;
+  }
 }
 
 /**
@@ -29,7 +36,7 @@ function isOdd(n) {
  * Hint: you can solve this without writing any loops!
  */
 function oddsSmallerThan(n) {
-  // Your code here
+    return parseInt(n / 2);
 }
 
 /**
@@ -44,6 +51,11 @@ function oddsSmallerThan(n) {
  */
 function squareOrDouble(n) {
   // Your code here
+  if (n % 2 === 0){
+    return n*2;
+  }else{
+    return n*n;
+  }
 }
 
 /**
@@ -65,9 +77,17 @@ function squareOrDouble(n) {
 function ageFromBirthDate(birthDate) {
   const _MS_PER_YEAR = 1000 * 60 * 60 * 24 * 365;
 
-  // Your code here
-}
+    let y = birthDate.slice(0,4);
+    let m = birthDate.slice(4,6);
+    let d = birthDate.slice(6);
 
+    let date_ag = new Date(y,m,d);
+    let date = new Date();
+    let age = date - date_ag;
+    age =  Math.floor(age/_MS_PER_YEAR);
+    return age;
+} 
+ageFromBirthDate("19870506");
 module.exports = {
   greet,
   isOdd,
