@@ -81,13 +81,12 @@ function ageFromBirthDate(birthDate) {
     let m = birthDate.slice(4,6);
     let d = birthDate.slice(6);
 
-    let date_ag = new Date(y,m,d);
+    let date_ag = new Date(y,m-1,d);
     let date = new Date();
     let age = date - date_ag;
     age =  Math.floor(age/_MS_PER_YEAR);
     return age;
 } 
-ageFromBirthDate("19870506");
 module.exports = {
   greet,
   isOdd,
